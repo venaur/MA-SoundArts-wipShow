@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition Website</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/mobile.css">
+</head>
+<body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- https://fonts.google.com/selection/embed -->
+
+    <div class="bg-img" id="bg-img"></div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <div class="navbar-menu">
+            <div class="menu-item">
+                <div class="navbar-titles">Artists</div>
+                <ul id="artist-list"></ul>
+            </div>
+            <div class="menu-item">
+                <div class="navbar-titles" id="performances">Performances</div>
+                <div id="performances-list" style="display: none;"></div>
+            </div>
+            <a href="https://hernoise.org/" target="_blank" class="menu-item">
+                <div class="navbar-titles homeHover">Her Noise Archive</div>
+            </a>
+            <a href="index.html" class="menu-item">
+                <div class="navbar-titles homeHover">Home</div>
+            </a>
+        </div>
+    </div>
+
+        <!-- Main Content Area -->
+    <div class="content" id="content"> </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
