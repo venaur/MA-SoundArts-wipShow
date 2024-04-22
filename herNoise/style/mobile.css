@@ -1,0 +1,228 @@
+/* Mobile View */
+
+@media only screen and (max-width: 1079px) {
+    body {
+        font-family: "Hind Siliguri";
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+        overflow-y: scroll;
+    }
+    .bg-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        overflow: hidden;
+    }
+    
+
+    /* ---Menu Icon--- */
+    .menu-icon {
+        cursor: pointer;
+        position: fixed;
+        top: 3vh;
+        left: 5vw;
+        z-index: 200;
+        width: 6vw;
+        min-width: 6vw;
+    }
+    .menu-line {
+        height: 4px;
+        background-color: #930000;
+        margin: 0.8vh 0;
+    }
+/* ---Navigation menu back--- */
+    .navbar {
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: none;
+        z-index: 100 !important;
+        opacity: 0; 
+        background-color: rgba(185, 185, 185, 0.646);
+        transition: opacity 0.8s ease; 
+    }
+/* --- for artist content--- */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        display: none;
+        transition: opacity 0.8s ease; 
+    }
+/* ---artist pages ---*/
+    .content {
+        margin-left: auto; 
+        margin-right: auto; 
+        padding: 20px;
+        max-width: 90%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: left; 
+        text-align: left; 
+        transition: margin-left 0.8s ease; 
+    }
+/* ------Style for artist names list--- */
+    #artist-list {
+        list-style: none; 
+        margin-left: -2vw;
+        margin-top: 0vh;
+        width: fit-content;
+    }
+/* ---Style for each artist name--- */
+    #artist-list li {
+        font-family: "Hind Siliguri";
+        font-weight: 450;
+        font-style: normal;
+        font-size: 42px;
+        padding-bottom: 1vh;
+        padding: 3px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s ease; 
+    }
+/* ---Hover effect for artist names--- */
+    #artist-list li:hover {
+        background-color:rgba(231, 229, 229, 0.646);
+        width: fit-content;
+    }
+/* ---filter property--- */
+    #content{
+        transition: filter 0.8s ease;
+    }
+    .blur {
+        filter: blur(15px);
+        -webkit-filter: blur(15px);
+    }
+
+/* ---Individual Pages--- */
+    /* artist img */
+    #content img {
+        position: relative;
+        margin-top: 6vh;
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin-bottom: 3vh;
+    }
+    /* artist title */
+    #content h2{
+        font-family: "Hind Siliguri";
+        font-weight: 500;
+        font-size: 44px;
+        margin-bottom: 0;
+    }
+    /* artist name */
+    #content h3{
+        font-family: "Hind Siliguri";
+        font-weight: 450;
+        font-size: 38px;
+        margin-bottom: 0;
+    }
+    /* artist desc */
+    #content p{
+        font-family: "Hind Siliguri";
+        font-weight: 250;
+        font-style: normal;
+        font-size: 34px;
+        line-height: 4vh;
+    }
+/* Instagram link */
+    .instagram-link {
+        display: flex; 
+        align-items: center;
+        text-decoration: none; 
+        color: #333; 
+        width: 10%; 
+    }
+    .instagram-icon {
+        width: 80%; 
+        height: auto;
+        margin-right: 3vw; 
+    }
+    .instagram-username {
+        font-family: "Hind Siliguri";
+        font-weight: 450;
+        font-style: normal;
+        margin-top: 3vh;
+        font-size: 32px;
+        transition: all 0.5s ease;
+        color:#000000;
+
+        &:hover{
+            color:#777777
+        }
+    }
+
+    .homeHover:hover{
+        color: rgb(17, 17, 17);
+        border-radius: 10px;
+        width: fit-content;
+        transition: all 0.5s ease;
+        
+        &:hover{
+            background-color:rgba(231, 229, 229, 0.646);
+        }
+    }
+    .navbar-menu{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10vw;
+        margin-top: 8vh;
+        margin-bottom: 10vh;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    #performances-list {
+        position: relative;
+        display: block;
+        margin-top: 0vh;
+        margin-left: 0vw;
+    }
+    
+    .performance-item {
+        margin-bottom: 1vh;
+        padding: 3vw;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        margin-bottom: 3vh;
+        width: fit-content;
+        font-size: 32px;
+    }
+        /* menu items */
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh; 
+        height:fit-content;
+    }
+    /* navbar titles */
+    .navbar-titles {
+        font-family: "Hind Siliguri";
+        font-weight: 400;
+        width: fit-content;
+        font-size: 48px;
+        color: rgb(87, 87, 87);
+        white-space: nowrap;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px; 
+        cursor: pointer;
+    }
+}
