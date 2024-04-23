@@ -248,5 +248,32 @@
         cursor: pointer;
     }
     
+
+
+/* For indentation */
+    .indented-text {
+        text-indent: 4vw; 
+        font-family: "Hind Siliguri";
+        font-weight: 250;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 0vh;
+        margin-top: -3vh;
+    }
+    .two{
+        text-indent: 8vw; 
+    }
+    .three{
+        text-indent: 12vw; 
+    }
+    .four{
+        text-indent: 16vw; 
+    }
+    .five{
+        text-indent: 20vw;
+    }
+    .six{
+        text-indent: 32vw;
+    }
 }
 

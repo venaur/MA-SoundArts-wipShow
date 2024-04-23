@@ -202,7 +202,7 @@
         border: 1px solid #ffffff;
         border-radius: 10px;
         margin-bottom: 3vh;
-        width: fit-content;
+        width: 60vw;
         font-size: 20px;
     }
         /* menu items */
@@ -226,5 +226,33 @@
         padding-right: 5px;
         margin-bottom: 10px; 
         cursor: pointer;
+    }
+
+
+    /* For indentation */
+    .indented-text {
+        text-indent: 2vw; 
+        line-height: 0vh;
+        margin-top: -2vh;
+        font-family: "Hind Siliguri";
+        font-weight: 250;
+        font-style: normal;
+        font-size: 18px;
+
+    }
+    .two{
+        text-indent: 4vw; 
+    }
+    .three{
+        text-indent: 6vw; 
+    }
+    .four{
+        text-indent: 8vw; 
+    }
+    .five{
+        text-indent: 10vw;
+    }
+    .six{
+        text-indent: 12vw;
     }
 }
