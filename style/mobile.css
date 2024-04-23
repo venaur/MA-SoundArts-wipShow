@@ -20,7 +20,16 @@
         background-attachment: fixed; 
         overflow: hidden;
     }
-    
+    a{
+        color:#114a7e;
+        font-family: "Hind Siliguri";
+        font-weight: 450;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color:  #930000;
+        }
+    }
 
     /* ---Menu Icon--- */
     .menu-icon {
