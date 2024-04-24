@@ -42,7 +42,7 @@ const artists = [
     {name: "Ethan Cohen",          
             image: "assets/blank.png", 
             title: "Sports News Blues",
-            description: "<i<Sports News Blues </i>is a video installation and performance piece that reimagines the rhythms, myths, and textures of contemporary football culture." },
+            description: "<i>Sports News Blues </i>is a video installation and performance piece that reimagines the rhythms, myths, and textures of contemporary football culture." },
     // {name: "Jiachen Li", 
     //         image: "No Image", 
     //         title: "Untitled", 
