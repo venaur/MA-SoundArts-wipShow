@@ -30,6 +30,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed; 
         overflow: hidden;
+        z-index: 80;
     }
 
     a{
@@ -118,8 +119,9 @@
         padding: 10px;
         cursor: pointer;
         transition: background-color 0.2s ease;
-        text-align: left; /* Ensure text alignment is left */
+        text-align: left;
         border-radius: 10px;
+        white-space: nowrap;
     }
     
 /*---spacing between artist names---- */
@@ -215,7 +217,7 @@
     .navbar-menu{
         display: flex;
         flex-direction: row;
-        margin-left: 10vw;
+        margin-left: 8vw;
         margin-top: 3vh;
         padding: 10px;
     }
@@ -243,7 +245,7 @@
     .menu-item {
         display: flex;
         flex-direction: column;
-        margin-right: 10vw; 
+        margin-right: 7vw; 
         height:fit-content;
     }
     /* navbar titles */
@@ -286,5 +288,18 @@
     .six{
         text-indent: 32vw;
     }
+
+
+    #floorPlanImg {
+        width:65%;
+        height: auto;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        transition: filter 0.8s ease;
+    }
 }
+
 

@@ -26,7 +26,7 @@ const artists = [
     {name: "Da Won Kwack",         
             image: "assets/dawon.png",
             title: "R U FEMI?", 
-            description: "<i>R U FEMI?</i> (2024) identifies the roots of misogyny stemming from hate speech and accuses urgent issues such as femicide and gender violence in Korea. Inspired by socialist feminism, the foundational point for <i>Her Noise Archive</i> (2012), it intends to critique the side effects of patriarchy and capitalist structures. This sound installation commences with the question, 'Are you femi(nist)?', a phrase deemed as hate speech in Korea. It deals with the victims who have short hair a symbol of feminism- and those who get victimised simply for being women. <br><br>The symbolic representation of victims manifests through the sounds emitted by decaying fruits, regarded as a female archetype. These sounds convey the hate speech caused by misogyny, the sound relates to the events of victims of gender crime and femicide, and the meaning of hate speach. Furthermore, it is designed to highlight decay in the envelope to underscore the potential for energy to sustain or rise rather than diminish.<br><br> Invite the audience to empathise with the victim's suffering or express their emotions while interacting with the rotten fruits, according to the provided text score. Their improvisation will vary depending on how the audience engages with pain from a tragic event.",
+            description: "<i>R U FEMI?</i> (2024) identifies the roots of misogyny stemming from hate speech and accuses urgent issues such as femicide and gender violence in Korea. Inspired by socialist feminism, the foundational point for <i>Her Noise Archive</i> (2012), it intends to critique the side effects of patriarchy and capitalist structures. This sound installation commences with the question, 'Are you femi(nist)?', a phrase deemed as hate speech in Korea. It deals with the victims who have short hair a symbol of feminism- and those who get victimised simply for being women. <br><br>The symbolic representation of victims manifests through the sounds emitted by decaying fruits, regarded as a female archetype. These sounds convey the hate speech caused by misogyny, the sound relates to the events of victims of gender crime and femicide, and the meanings of hate speach. Furthermore, it is designed to highlight decay in the envelope to underscore the potential for energy to sustain or rise rather than diminish.<br><br> Invite the audience to empathise with the victim's suffering or express their emotions while interacting with the rotten fruits, according to the provided text score. Their improvisation will vary depending on how the audience engages with pain from a tragic event.",
             instagram: "jolitea"},
     {name: "VenAur",               
             image: "assets/venaur.png", 
@@ -62,6 +62,10 @@ const content = document.getElementById("content");
 const overlay = document.getElementById("overlay");
 const bgImg = document.getElementById("bg-img");
 const performancesTitle = document.getElementById("performances");
+
+const floorPlan = document.getElementById("floorPlan");
+const floorPlanImg = document.getElementById("floorPlanImg");
+
 const performancesListContainer = document.getElementById("performances-list");
 const performancesData = [
     { name: "Amias Hanley & VenAur", title: "Her Noise Floor", time: "17:30", location: "Atrium, LCC" },
@@ -69,10 +73,11 @@ const performancesData = [
     { name: "Marina Sanchez", title: "Can Tree-O Air", time: "18:00", location: "Atrium, LCC" },
 
 ];
-
 //-------Navbar------
 let navbarVisible = false; // navbar visibility
+let floorPlanVisible = false;
 navbar.style.pointerEvents = "none";
+
 
 //----bg img----
 function setBackgroundImage() {
@@ -86,29 +91,33 @@ function setBackgroundImage() {
 }
 
 bgImg.style.display = "block";
+floorPlanImg.style.display = "none"; 
 
-///------------ toggle the navigation menu---
+
+///------------ toggle the navigation menu-------
 function toggleMenu() {
-    //not visible
     if (!navbarVisible) {
         displayArtistNames(); 
         content.classList.add("blur"); 
         bgImg.classList.add("blur");
+        floorPlanImg.classList.add("blur");
         navbar.style.pointerEvents = "auto"; 
     } else {
-        content.classList.remove("blur");
-        bgImg.classList.remove("blur"); 
+        // Menu is being closed
+        content.classList.remove("blur"); 
+        bgImg.classList.remove("blur");
+        floorPlanImg.classList.remove("blur");
         navbar.style.pointerEvents = "none"; 
     }
-    navbarVisible = !navbarVisible; 
-    navbar.style.opacity = navbarVisible ? "1" : "0"; 
-    overlay.style.display = navbarVisible ? "block" : "none"; 
+    navbarVisible = !navbarVisible;
+    navbar.style.opacity = navbarVisible ? "1" : "0";
+    overlay.style.display = navbarVisible ? "block" : "none";
 }
 
 //------ display artist names-----
 function displayArtistNames() {
     const artistList = document.getElementById("artist-list");
-    artistList.innerHTML = ""; // Clear previous list items
+    artistList.innerHTML = ""; 
 
     artists.forEach((artist, index) => {
         const listItem = document.createElement("li");
@@ -121,7 +130,10 @@ function displayArtistNames() {
 // ---display artist details----
 function showArtist(index) {
     const artist = artists[index];
+    
     bgImg.style.display = "none";
+    floorPlanVisible = false; 
+    floorPlanImg.style.display = "none"; 
 
     document.body.style.backgroundImage = 'none';
 
@@ -140,15 +152,26 @@ function showArtist(index) {
         <div>${instagramLink}</div>
       
     `;
+
+     // Display artist details
+     content.style.display = "block";
     toggleMenu(); 
 }
 
+//---------map-----------------
 
+    floorPlan.addEventListener("click", () => {
+        content.style.display = "none"; 
+        floorPlanImg.style.display = "block"; 
+        bgImg.style.display = "none";
+        toggleMenu(); 
+    });
+
+//------------Performances--------
 function displayPerformances() {
     // Clear previous contents---
     performancesListContainer.innerHTML = "";
 
-    // ----Create list items for each performance---
     performancesData.forEach((performance) => {
         const performanceItem = document.createElement("div");
         performanceItem.classList.add("performance-item");
@@ -160,7 +183,6 @@ function displayPerformances() {
         `;
         performancesListContainer.appendChild(performanceItem);
     });
-
     performancesListContainer.style.display = "block";
 }
 
